@@ -9,8 +9,32 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as VoidwalkRouteImport } from './routes/voidwalk'
+import { Route as SingularityRouteImport } from './routes/singularity'
+import { Route as NebulaRouteImport } from './routes/nebula'
+import { Route as EclipseRouteImport } from './routes/eclipse'
 import { Route as IndexRouteImport } from './routes/index'
 
+const VoidwalkRoute = VoidwalkRouteImport.update({
+  id: '/voidwalk',
+  path: '/voidwalk',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SingularityRoute = SingularityRouteImport.update({
+  id: '/singularity',
+  path: '/singularity',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const NebulaRoute = NebulaRouteImport.update({
+  id: '/nebula',
+  path: '/nebula',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EclipseRoute = EclipseRouteImport.update({
+  id: '/eclipse',
+  path: '/eclipse',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -19,28 +43,72 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/eclipse': typeof EclipseRoute
+  '/nebula': typeof NebulaRoute
+  '/singularity': typeof SingularityRoute
+  '/voidwalk': typeof VoidwalkRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/eclipse': typeof EclipseRoute
+  '/nebula': typeof NebulaRoute
+  '/singularity': typeof SingularityRoute
+  '/voidwalk': typeof VoidwalkRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/eclipse': typeof EclipseRoute
+  '/nebula': typeof NebulaRoute
+  '/singularity': typeof SingularityRoute
+  '/voidwalk': typeof VoidwalkRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths: '/' | '/eclipse' | '/nebula' | '/singularity' | '/voidwalk'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to: '/' | '/eclipse' | '/nebula' | '/singularity' | '/voidwalk'
+  id: '__root__' | '/' | '/eclipse' | '/nebula' | '/singularity' | '/voidwalk'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  EclipseRoute: typeof EclipseRoute
+  NebulaRoute: typeof NebulaRoute
+  SingularityRoute: typeof SingularityRoute
+  VoidwalkRoute: typeof VoidwalkRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/voidwalk': {
+      id: '/voidwalk'
+      path: '/voidwalk'
+      fullPath: '/voidwalk'
+      preLoaderRoute: typeof VoidwalkRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/singularity': {
+      id: '/singularity'
+      path: '/singularity'
+      fullPath: '/singularity'
+      preLoaderRoute: typeof SingularityRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/nebula': {
+      id: '/nebula'
+      path: '/nebula'
+      fullPath: '/nebula'
+      preLoaderRoute: typeof NebulaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/eclipse': {
+      id: '/eclipse'
+      path: '/eclipse'
+      fullPath: '/eclipse'
+      preLoaderRoute: typeof EclipseRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -53,6 +121,10 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  EclipseRoute: EclipseRoute,
+  NebulaRoute: NebulaRoute,
+  SingularityRoute: SingularityRoute,
+  VoidwalkRoute: VoidwalkRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
