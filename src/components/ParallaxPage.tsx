@@ -430,7 +430,7 @@ export function ParallaxPage() {
   return (
     <div className="relative min-h-screen text-white antialiased selection:bg-fuchsia-400/40 selection:text-white">
       <Starfield y={y} reduced={reduced} />
-      <Nav active={active} />
+      <CosmicNav />
       <Hero y={y} reduced={reduced} />
       {sections.slice(1).map((s, i) => (
         <Chapter key={s.id} data={s} index={i + 1} y={y} reduced={reduced} />
