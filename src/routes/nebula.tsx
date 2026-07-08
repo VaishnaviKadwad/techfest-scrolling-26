@@ -33,7 +33,9 @@ function NebulaPage() {
   const rel = useElementScroll(trackRef);
 
   // Scroll drives horizontal translation of the track
-  const progress = Math.max(0, Math.min(1, rel / (window.innerHeight * (cards.length - 0.5))));
+  const vh = typeof window !== "undefined" ? window.innerHeight : 800;
+  const progress = Math.max(0, Math.min(1, rel / (vh * (cards.length - 0.5))));
+
   const shift = reduced ? 0 : progress * (cards.length - 1) * 340;
 
   return (
