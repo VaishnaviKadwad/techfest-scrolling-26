@@ -1,4 +1,6 @@
 import { useEffect, useRef, useState } from "react";
+import { CosmicNav } from "@/components/CosmicNav";
+
 
 const sections = [
   {
