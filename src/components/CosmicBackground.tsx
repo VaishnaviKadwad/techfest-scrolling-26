@@ -46,6 +46,39 @@ export const palettes: Record<string, Palette> = {
       { color: "#f472b6", x: "80%", y: "80%", size: 500, speed: 0.22 },
     ],
   },
+  quasar: {
+    base: "radial-gradient(ellipse at top, #1a2e0b 0%, #04140a 45%, #000806 100%)",
+    blobs: [
+      { color: "#22c55e", x: "20%", y: "10%", size: 560, speed: 0.09 },
+      { color: "#eab308", x: "75%", y: "55%", size: 620, speed: 0.14 },
+      { color: "#14b8a6", x: "40%", y: "130%", size: 500, speed: 0.18 },
+    ],
+  },
+  wormhole: {
+    base: "radial-gradient(ellipse at center, #0b1e2e 0%, #030a18 55%, #000208 100%)",
+    blobs: [
+      { color: "#06b6d4", x: "50%", y: "40%", size: 780, speed: 0.06 },
+      { color: "#8b5cf6", x: "10%", y: "70%", size: 520, speed: 0.16 },
+      { color: "#ec4899", x: "85%", y: "20%", size: 480, speed: 0.2 },
+    ],
+  },
+  pulsar: {
+    base: "radial-gradient(ellipse at top, #2e0b1c 0%, #14041b 50%, #060010 100%)",
+    blobs: [
+      { color: "#f43f5e", x: "60%", y: "10%", size: 600, speed: 0.1 },
+      { color: "#a855f7", x: "-10%", y: "60%", size: 640, speed: 0.15 },
+      { color: "#38bdf8", x: "70%", y: "130%", size: 520, speed: 0.2 },
+    ],
+  },
+  stardust: {
+    base: "radial-gradient(ellipse at top, #0e0a2e 0%, #04031a 50%, #01000c 100%)",
+    blobs: [
+      { color: "#c084fc", x: "30%", y: "15%", size: 560, speed: 0.08 },
+      { color: "#60a5fa", x: "75%", y: "60%", size: 640, speed: 0.14 },
+      { color: "#f9a8d4", x: "20%", y: "130%", size: 480, speed: 0.18 },
+    ],
+  },
+
 };
 
 export function CosmicBackground({ palette = "aether" }: { palette?: keyof typeof palettes }) {
