@@ -55,7 +55,7 @@ function NebulaPage() {
         <div className="relative z-10 text-center" style={{ transform: reduced ? undefined : `translate3d(0, ${y * 0.35}px, 0)`, opacity: Math.max(0, 1 - y / 700) }}>
           <p className="mb-5 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3.5 py-1 text-[11px] font-medium uppercase tracking-[0.3em] text-white/70 backdrop-blur">
             <span className="h-1.5 w-1.5 rounded-full bg-pink-400 shadow-[0_0_10px_rgba(244,114,182,0.9)]" />
-            Chapter II · Horizontal drift
+            Chapter I · Horizontal drift
           </p>
           <h1 className="text-white font-black leading-[0.95] tracking-tight text-[clamp(3rem,10vw,7.5rem)]">
             Through the <span className="bg-gradient-to-r from-pink-300 via-fuchsia-300 to-cyan-200 bg-clip-text text-transparent">nebula</span>.
