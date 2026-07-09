@@ -115,7 +115,7 @@ function StardustPage() {
           <div className="pointer-events-none absolute top-24 left-1/2 -translate-x-1/2 z-10 max-w-2xl text-center px-6">
             <p className="mb-5 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3.5 py-1 text-[11px] font-medium uppercase tracking-[0.3em] text-white/70 backdrop-blur">
               <span className="h-1.5 w-1.5 rounded-full bg-violet-300 shadow-[0_0_10px_rgba(196,181,253,0.9)]" />
-              Chapter IX · Constellation assembly
+              Chapter VII · Constellation assembly
             </p>
             <h1 className="text-white font-black leading-[0.95] tracking-tight text-[clamp(2.5rem,8vw,6rem)]">
               <span className="bg-gradient-to-r from-violet-200 via-sky-200 to-pink-200 bg-clip-text text-transparent">Stardust</span> remembers.
