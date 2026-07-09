@@ -240,7 +240,7 @@ function Hero({ y, reduced }: { y: number; reduced: boolean }) {
           into the <span className="bg-gradient-to-r from-fuchsia-300 via-violet-300 to-cyan-200 bg-clip-text text-transparent">cosmos</span>.
         </h1>
         <p className="mx-auto mt-6 max-w-xl text-base sm:text-lg text-white/60">
-          Four chapters. One infinite scroll. Move through layers of light, dust, and gravity at your own pace.
+          Eight chapters. One infinite scroll. Move through layers of light, dust, and gravity at your own pace.
         </p>
       </div>
       {/* Scroll indicator */}

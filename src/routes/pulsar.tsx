@@ -64,7 +64,7 @@ function PulsarPage() {
         <div className="relative z-10 text-center" style={{ opacity: Math.max(0, 1 - y / 700) }}>
           <p className="mb-5 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3.5 py-1 text-[11px] font-medium uppercase tracking-[0.3em] text-white/70 backdrop-blur">
             <span className="h-1.5 w-1.5 rounded-full bg-rose-400 shadow-[0_0_10px_rgba(251,113,133,0.9)]" />
-            Chapter VIII · Rhythmic timeline
+            Chapter VI · Rhythmic timeline
           </p>
           <h1 className="text-white font-black leading-[0.95] tracking-tight text-[clamp(3rem,10vw,7.5rem)]">
             <span className="bg-gradient-to-r from-rose-200 via-fuchsia-200 to-sky-200 bg-clip-text text-transparent">Pulsar</span>.

@@ -117,7 +117,7 @@ function EclipsePage() {
         <div className="relative z-10 text-center" style={{ transform: reduced ? undefined : `translate3d(0, ${y * 0.3}px, 0)`, opacity: Math.max(0, 1 - y / 700) }}>
           <p className="mb-5 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3.5 py-1 text-[11px] font-medium uppercase tracking-[0.3em] text-white/70 backdrop-blur">
             <span className="h-1.5 w-1.5 rounded-full bg-amber-400 shadow-[0_0_10px_rgba(251,191,36,0.9)]" />
-            Chapter IV · Totality
+            Chapter III · Totality
           </p>
           <h1 className="text-white font-black leading-[0.95] tracking-tight text-[clamp(3rem,10vw,7.5rem)]">
             <span className="bg-gradient-to-r from-amber-200 via-orange-400 to-rose-500 bg-clip-text text-transparent">Eclipse</span>.
