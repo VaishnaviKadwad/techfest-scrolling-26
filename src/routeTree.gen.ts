@@ -9,20 +9,44 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as WormholeRouteImport } from './routes/wormhole'
 import { Route as VoidwalkRouteImport } from './routes/voidwalk'
+import { Route as StardustRouteImport } from './routes/stardust'
 import { Route as SingularityRouteImport } from './routes/singularity'
+import { Route as QuasarRouteImport } from './routes/quasar'
+import { Route as PulsarRouteImport } from './routes/pulsar'
 import { Route as NebulaRouteImport } from './routes/nebula'
 import { Route as EclipseRouteImport } from './routes/eclipse'
 import { Route as IndexRouteImport } from './routes/index'
 
+const WormholeRoute = WormholeRouteImport.update({
+  id: '/wormhole',
+  path: '/wormhole',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const VoidwalkRoute = VoidwalkRouteImport.update({
   id: '/voidwalk',
   path: '/voidwalk',
   getParentRoute: () => rootRouteImport,
 } as any)
+const StardustRoute = StardustRouteImport.update({
+  id: '/stardust',
+  path: '/stardust',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const SingularityRoute = SingularityRouteImport.update({
   id: '/singularity',
   path: '/singularity',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const QuasarRoute = QuasarRouteImport.update({
+  id: '/quasar',
+  path: '/quasar',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PulsarRoute = PulsarRouteImport.update({
+  id: '/pulsar',
+  path: '/pulsar',
   getParentRoute: () => rootRouteImport,
 } as any)
 const NebulaRoute = NebulaRouteImport.update({
@@ -45,42 +69,93 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/eclipse': typeof EclipseRoute
   '/nebula': typeof NebulaRoute
+  '/pulsar': typeof PulsarRoute
+  '/quasar': typeof QuasarRoute
   '/singularity': typeof SingularityRoute
+  '/stardust': typeof StardustRoute
   '/voidwalk': typeof VoidwalkRoute
+  '/wormhole': typeof WormholeRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/eclipse': typeof EclipseRoute
   '/nebula': typeof NebulaRoute
+  '/pulsar': typeof PulsarRoute
+  '/quasar': typeof QuasarRoute
   '/singularity': typeof SingularityRoute
+  '/stardust': typeof StardustRoute
   '/voidwalk': typeof VoidwalkRoute
+  '/wormhole': typeof WormholeRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/eclipse': typeof EclipseRoute
   '/nebula': typeof NebulaRoute
+  '/pulsar': typeof PulsarRoute
+  '/quasar': typeof QuasarRoute
   '/singularity': typeof SingularityRoute
+  '/stardust': typeof StardustRoute
   '/voidwalk': typeof VoidwalkRoute
+  '/wormhole': typeof WormholeRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/eclipse' | '/nebula' | '/singularity' | '/voidwalk'
+  fullPaths:
+    | '/'
+    | '/eclipse'
+    | '/nebula'
+    | '/pulsar'
+    | '/quasar'
+    | '/singularity'
+    | '/stardust'
+    | '/voidwalk'
+    | '/wormhole'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/eclipse' | '/nebula' | '/singularity' | '/voidwalk'
-  id: '__root__' | '/' | '/eclipse' | '/nebula' | '/singularity' | '/voidwalk'
+  to:
+    | '/'
+    | '/eclipse'
+    | '/nebula'
+    | '/pulsar'
+    | '/quasar'
+    | '/singularity'
+    | '/stardust'
+    | '/voidwalk'
+    | '/wormhole'
+  id:
+    | '__root__'
+    | '/'
+    | '/eclipse'
+    | '/nebula'
+    | '/pulsar'
+    | '/quasar'
+    | '/singularity'
+    | '/stardust'
+    | '/voidwalk'
+    | '/wormhole'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   EclipseRoute: typeof EclipseRoute
   NebulaRoute: typeof NebulaRoute
+  PulsarRoute: typeof PulsarRoute
+  QuasarRoute: typeof QuasarRoute
   SingularityRoute: typeof SingularityRoute
+  StardustRoute: typeof StardustRoute
   VoidwalkRoute: typeof VoidwalkRoute
+  WormholeRoute: typeof WormholeRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/wormhole': {
+      id: '/wormhole'
+      path: '/wormhole'
+      fullPath: '/wormhole'
+      preLoaderRoute: typeof WormholeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/voidwalk': {
       id: '/voidwalk'
       path: '/voidwalk'
@@ -88,11 +163,32 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof VoidwalkRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/stardust': {
+      id: '/stardust'
+      path: '/stardust'
+      fullPath: '/stardust'
+      preLoaderRoute: typeof StardustRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/singularity': {
       id: '/singularity'
       path: '/singularity'
       fullPath: '/singularity'
       preLoaderRoute: typeof SingularityRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/quasar': {
+      id: '/quasar'
+      path: '/quasar'
+      fullPath: '/quasar'
+      preLoaderRoute: typeof QuasarRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pulsar': {
+      id: '/pulsar'
+      path: '/pulsar'
+      fullPath: '/pulsar'
+      preLoaderRoute: typeof PulsarRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/nebula': {
@@ -123,19 +219,13 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   EclipseRoute: EclipseRoute,
   NebulaRoute: NebulaRoute,
+  PulsarRoute: PulsarRoute,
+  QuasarRoute: QuasarRoute,
   SingularityRoute: SingularityRoute,
+  StardustRoute: StardustRoute,
   VoidwalkRoute: VoidwalkRoute,
+  WormholeRoute: WormholeRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}

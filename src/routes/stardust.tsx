@@ -82,7 +82,7 @@ function StardustPage() {
                 ? 0
                 : Math.sin((y + i * 30) * 0.003 * s.speed) * 0.03;
               const px = s.rx + (s.tx - s.rx) * e + wander;
-              const py = s.ry + (s.ty - s.rz(0), s.ty - s.ry) * e - wander;
+              const py = s.ry + (s.ty - s.ry) * e - wander;
               // subtle cursor repulsion
               const dx = (mp.x - 0.5) * 2;
               const dy = (mp.y - 0.5) * 2;
