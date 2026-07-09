@@ -70,7 +70,7 @@ function WormholePage() {
           <div className="relative z-10 max-w-2xl text-center px-6">
             <p className="mb-5 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3.5 py-1 text-[11px] font-medium uppercase tracking-[0.3em] text-white/70 backdrop-blur">
               <span className="h-1.5 w-1.5 rounded-full bg-cyan-300 shadow-[0_0_10px_rgba(103,232,249,0.9)]" />
-              Chapter VII · Spiral tunnel
+              Chapter V · Spiral tunnel
             </p>
             <h1 className="text-white font-black leading-[0.95] tracking-tight text-[clamp(3rem,10vw,7rem)]">
               <span className="bg-gradient-to-r from-cyan-200 via-violet-300 to-pink-200 bg-clip-text text-transparent">Fold</span>
