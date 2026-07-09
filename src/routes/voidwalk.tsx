@@ -67,7 +67,7 @@ function VoidwalkPage() {
           <div className="relative z-10 max-w-2xl text-center px-6">
             <p className="mb-5 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3.5 py-1 text-[11px] font-medium uppercase tracking-[0.3em] text-white/70 backdrop-blur">
               <span className="h-1.5 w-1.5 rounded-full bg-sky-400 shadow-[0_0_10px_rgba(56,189,248,0.9)]" />
-              Chapter III · Perspective tunnel
+              Chapter II · Perspective tunnel
             </p>
             <h1 className="text-white font-black leading-[0.95] tracking-tight text-[clamp(3rem,10vw,7rem)]">
               <span className="bg-gradient-to-r from-sky-200 via-blue-300 to-indigo-300 bg-clip-text text-transparent">Walk</span> into
